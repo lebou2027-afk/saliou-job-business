@@ -1225,4 +1225,20 @@ new MutationObserver(m=>{for(const r of m)for(const n of r.addedNodes)if(n.nodeT
 scan();
 })();
 </script>
+ <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+const firebaseConfig = {
+  apiKey: "COLLE_TON_APIKEY_ICI",
+  authDomain: "saliou-job-business.firebaseapp.com",
+  projectId: "saliou-job-business",
+  storageBucket: "saliou-job-business.firebasestorage.app",
+  messagingSenderId: "COLLE_TON_SENDERID_ICI",
+  appId: "COLLE_TON_APPID_ICI"
+};
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+window.db = db;
+console.log("Firebase connecté !");
+</script>
 </body></html>
